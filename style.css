@@ -1,12 +1,5 @@
 /* # Front-end Style Guide
 
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
 ## Colors
 
 ### Primary
@@ -33,31 +26,72 @@ The designs were created to the following widths:
 - Weights: 400, 700 */
 
 :root {
-    --base-primary: 25 97% 53%;
-    --base-neutral-100: 0 0% 100%;
-    --base-neutral-300: 217 12% 63%;
-    --base-neutral-500: 216 12% 54%;
-    --base-neutral-700: 213 19% 18%;
-    --base-neutral-900: 216 12% 8%;
+  --base-primary: 25 97% 53%;
+  --clr-primary: hsl(var(--base-primary));
 
-    --clr-primary: hsl(var(--base-primary));
-    --clr-neutral-100: hsl(var(--base-neutral-100));
-    --clr-neutral-300: hsl(var(--base-neutral-300));
-    --clr-neutral-500: hsl(var(--base-neutral-500));
-    --clr-neutral-700: hsl(var(--base-neutral-700));
-    --clr-neutral-900: hsl(var(--base-neutral-900));
+  --base-background: 216 12% 8%;
+  --clr-background: hsl(var(--base-background));
 
-    --font-family: "Overpass", sans-serif;
-    --font-normal: 400;
-    --font-bold: 700;
-    --font-size: 15px;
+  --base-window-background: 213 19% 18%;
+  --clr-window-background: hsl(var(--base-window-background));
 
+  --base-font: 0 0% 100%;
+  --clr-font: hsl(var(--base-font));
+
+  --base-light-grey: 217 12% 63%;
+  --clr-light-grey: hsl(var(--base-light-grey));
+
+  --base-medium-grey: 216 12% 54%;
+  --clr-medium-grey: hsl(var(--base-medium-grey));
+
+  --font-family: "Overpass", sans-serif;
+  --font-normal: 400;
+  --font-bold: 700;
+  --font-size: 15px;
 }
 
+html,
 body {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    font-weight: var(--font-normal);
-    min-height: 100vh;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-normal);
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--clr-background);
+  color: var(--clr-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  background: linear-gradient(
+    to bottom,
+    hsla(from var(--clr-medium-grey) h s l / 0.3),
+    hsla(from var(--clr-medium-grey) h s l / 0.1)
+  );
+  border-radius: 12px;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.star-icon-container {
+  height: 34px;
+  width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  border-radius: 50%;
+  background-color: hsla(from var(--clr-medium-grey) h s l / 0.2);
+}
