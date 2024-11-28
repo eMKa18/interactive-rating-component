@@ -158,6 +158,34 @@ input[type="radio"]:focus + label {
   color: var(--clr-primary);
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.select-msg {
+  background-color: hsla(from var(--clr-medium-grey) h s l / 0.2);
+  border-radius: 2rem;
+  padding: 0.5rem 0.7rem;
+  color: var(--clr-primary);
+}
+
+.thanks-title {
+  font-size: x-large;
+  padding-top: 1rem;
+}
+
+.thanks-description {
+  color: var(--clr-light-grey);
+  text-align: center;
+}
+
 .attribution {
   position: sticky;
   bottom: 0;
