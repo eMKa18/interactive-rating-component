@@ -35,8 +35,8 @@
   --base-window-background: 213 19% 18%;
   --clr-window-background: hsl(var(--base-window-background));
 
-  --base-font: 0 0% 100%;
-  --clr-font: hsl(var(--base-font));
+  --base-white: 0 0% 100%;
+  --clr-white: hsl(var(--base-white));
 
   --base-light-grey: 217 12% 63%;
   --clr-light-grey: hsl(var(--base-light-grey));
@@ -58,8 +58,9 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: var(--clr-background);
-  color: var(--clr-font);
+  color: var(--clr-white);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -79,19 +80,90 @@ body {
     hsla(from var(--clr-medium-grey) h s l / 0.1)
   );
   border-radius: 12px;
-  min-width: 300px;
-  max-width: 400px;
+  min-width: 250px;
+  max-width: 300px;
   padding: 2rem;
   margin: 2rem;
 }
 
 .star-icon-container {
-  height: 34px;
-  width: 34px;
+  justify-self: start;
+}
+
+.circle-background {
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-self: start;
   border-radius: 50%;
   background-color: hsla(from var(--clr-medium-grey) h s l / 0.2);
+}
+
+.description {
+  color: var(--clr-light-grey);
+}
+
+.buttons {
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.rate {
+  background: none;
+  border: none;
+  color: var(--clr-light-grey);
+  appearance: none;
+  border-radius: 50%;
+  margin: 0;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"] + label:hover {
+  background-color: var(--clr-light-grey);
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--clr-primary);
+}
+
+input[type="radio"]:focus + label {
+  background-color: var(--clr-primary);
+}
+
+.submit {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  background-color: var(--clr-primary);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+}
+
+.attribution {
+  position: sticky;
+  bottom: 0;
+  font-size: x-small;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 60%);
 }

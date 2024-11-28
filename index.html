@@ -26,7 +26,7 @@
   <body>
     <main id="main">
       <div class="content">
-        <div class="star-icon-container">
+        <div class="star-icon-container circle-background">
           <svg
             class="star-icon"
             width="17"
@@ -40,67 +40,92 @@
           </svg>
         </div>
         <h1 class="question">How did we do?</h1>
-        <p class="feedback">
+        <p class="description">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <input
-          class="rate"
-          type="radio"
-          name="rating"
-          id="rating-1"
-          value="1"
-        />
-        <label for="rating-1">1</label>
-        <input
-          class="rate"
-          type="radio"
-          name="rating"
-          id="rating-2"
-          value="2"
-        />
-        <label for="rating-2">2</label>
-        <input
-          class="rate"
-          type="radio"
-          name="rating"
-          id="rating-3"
-          value="3"
-        />
-        <label for="rating-3">3</label>
-        <input
-          class="rate"
-          type="radio"
-          name="rating"
-          id="rating-4"
-          value="4"
-        />
-        <label for="rating-4">4</label>
-        <input
-          class="rate"
-          type="radio"
-          name="rating"
-          id="rating-5"
-          value="5"
-        />
-        <label for="rating-5">5</label>
-        <button class="button">Submit</button>
+        <div class="buttons">
+          <div class="circle-background">
+            <input
+              class="rate"
+              type="radio"
+              name="rating"
+              id="rating-1"
+              value="1"
+            />
+            <label for="rating-1">1</label>
+          </div>
+          <div class="circle-background">
+            <input
+              class="rate"
+              type="radio"
+              name="rating"
+              id="rating-2"
+              value="2"
+            />
+            <label for="rating-2">2</label>
+          </div>
+          <div class="circle-background">
+            <input
+              class="rate"
+              type="radio"
+              name="rating"
+              id="rating-3"
+              value="3"
+            />
+            <label for="rating-3">3</label>
+          </div>
+          <div class="circle-background">
+            <input
+              class="rate"
+              type="radio"
+              name="rating"
+              id="rating-4"
+              value="4"
+            />
+            <label for="rating-4">4</label>
+          </div>
+          <div class="circle-background">
+            <input
+              class="rate"
+              type="radio"
+              name="rating"
+              id="rating-5"
+              value="5"
+            />
+            <label for="rating-5">5</label>
+          </div>
+        </div>
+        <button type="button" class="submit" onclick="submit()">Submit</button>
       </div>
       <!-- Thank you state start -->
 
-      You selected
-      <!-- Add rating here -->
-      out of 5 Thank you! We appreciate you taking the time to give a rating. If
-      you ever need more support, don’t hesitate to get in touch!
+      <div class="thanks">
+        You selected
+        <!-- Add rating here -->
+        out of 5 Thank you! We appreciate you taking the time to give a rating.
+        If you ever need more support, don’t hesitate to get in touch!
+      </div>
 
       <!-- Thank you state end -->
-
-      <footer class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">eMKa18</a>.
-      </footer>
     </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">eMKa18</a>.
+    </footer>
+    <script>
+      function submit() {
+        const checkedOption = document.querySelector(
+          "input[name='rating']:checked"
+        );
+        if (checkedOption) {
+          const selectedRating = checkedOption.value;
+          const main = document.querySelector("#main");
+          // main.innerHTML
+        }
+      }
+    </script>
   </body>
 </html>
